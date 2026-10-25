@@ -1,0 +1,181 @@
+id,query,intent,language
+q001,List the chapters,browse_content,en
+q002,What chapters are there?,browse_content,en
+q003,Show me all the chapters,browse_content,en
+q004,What subjects can I study?,browse_content,en
+q005,Which chapters are in Science?,browse_content,en
+q006,What topics are covered?,browse_content,en
+q007,Show me the Mathematics chapters,browse_content,en
+q008,Which topics does this app cover?,browse_content,en
+q009,What can I learn here?,browse_content,en
+q010,List the available subjects,browse_content,en
+q011,What lessons are available?,browse_content,en
+q012,Show me the English chapters,browse_content,en
+q013,What is in the syllabus?,browse_content,en
+q014,Give me the chapter list,browse_content,en
+q015,What lessons does this app have?,browse_content,en
+q016,I don't understand,clarification,en
+q017,Explain that again,clarification,en
+q018,Can you explain it more simply?,clarification,en
+q019,I am confused about this topic,clarification,en
+q020,Please explain this in an easier way,clarification,en
+q021,Say that again please,clarification,en
+q022,That was too difficult to follow,clarification,en
+q023,Can you repeat that?,clarification,en
+q024,I still do not get it,clarification,en
+q025,Explain in simple words,clarification,en
+q026,This is confusing,clarification,en
+q027,Can you say it differently?,clarification,en
+q028,I did not understand your explanation,clarification,en
+q029,Make it easier to understand,clarification,en
+q030,Explain once more slowly,clarification,en
+q031,Explain how camels survive in the desert,concept_explanation,en
+q032,Explain how lines and angles work,concept_explanation,en
+q033,How do scientists investigate a question?,concept_explanation,en
+q034,Explain the order of operations,concept_explanation,en
+q035,How do number patterns work?,concept_explanation,en
+q036,Explain how litmus paper tests a substance,concept_explanation,en
+q037,Explain why animals adapt to their surroundings,concept_explanation,en
+q038,How do you compare very large numbers?,concept_explanation,en
+q039,Explain what Rama Natha learned about wealth,concept_explanation,en
+q040,How did Gajaraj and the dog become friends?,concept_explanation,en
+q041,Explain how substances are grouped as acidic or basic,concept_explanation,en
+q042,How do you read large numbers correctly?,concept_explanation,en
+q043,Explain what the river was trying to say,concept_explanation,en
+q044,Explain why education matters in the lesson,concept_explanation,en
+q045,How are angles measured with a protractor?,concept_explanation,en
+q046,What is an angle?,definition,en
+q047,Define a ray,definition,en
+q048,What does adaptation mean?,definition,en
+q049,What is an acid?,definition,en
+q050,What is a pattern?,definition,en
+q051,Define an arithmetic expression,definition,en
+q052,What is a base?,definition,en
+q053,What does neutral mean?,definition,en
+q054,What is place value?,definition,en
+q055,Define a line segment,definition,en
+q056,What is an indicator?,definition,en
+q057,What is a sequence?,definition,en
+q058,What does habitat mean?,definition,en
+q059,What is a protractor?,definition,en
+q060,Define estimation,definition,en
+q061,Give me an example of a number pattern,example_request,en
+q062,Can you give me an example of an acid?,example_request,en
+q063,Show me an example problem on angles,example_request,en
+q064,Give me an example for this topic,example_request,en
+q065,Can you show a real life example?,example_request,en
+q066,Show me a sample question,example_request,en
+q067,Give an example of a large number,example_request,en
+q068,Can I see a worked example?,example_request,en
+q069,Show me one more example,example_request,en
+q070,Give me a practical example of adaptation,example_request,en
+q071,Can you show an example with brackets?,example_request,en
+q072,I want to see an example,example_request,en
+q073,Show an example of a basic substance,example_request,en
+q074,Give me a simple example,example_request,en
+q075,Show me how it looks with an example,example_request,en
+q076,What is the rule for the order of operations?,formula_help,en
+q077,Which rule applies to this kind of sum?,formula_help,en
+q078,How do I simplify this expression?,formula_help,en
+q079,What is the rule for simplifying expressions?,formula_help,en
+q080,What are the steps in the correct order?,formula_help,en
+q081,What is the rule for naming angles?,formula_help,en
+q082,How do I estimate a large number?,formula_help,en
+q083,Which method applies to this sum?,formula_help,en
+q084,What steps do I follow for brackets?,formula_help,en
+q085,How do I find the value of an expression?,formula_help,en
+q086,Give me the rule for place value,formula_help,en
+q087,What is the method to compare numbers?,formula_help,en
+q088,Which method is used to measure an angle?,formula_help,en
+q089,What is the correct sequence of steps?,formula_help,en
+q090,What rule gives the correct answer here?,formula_help,en
+q091,Hi,greeting,en
+q092,Hello,greeting,en
+q093,Good morning,greeting,en
+q094,Good evening,greeting,en
+q095,Hey there,greeting,en
+q096,Namaste,greeting,en
+q097,Hello sir,greeting,en
+q098,Hi teacher,greeting,en
+q099,Good afternoon,greeting,en
+q100,Hey,greeting,en
+q101,Hello there,greeting,en
+q102,Hi again,greeting,en
+q103,Good morning teacher,greeting,en
+q104,Hello friend,greeting,en
+q105,"Hi, I am back",greeting,en
+q106,Help me solve my homework,homework_help,en
+q107,How do I solve this question?,homework_help,en
+q108,Can you help with this maths problem?,homework_help,en
+q109,I am stuck on my homework,homework_help,en
+q110,Help me answer this quiz question,homework_help,en
+q111,Can you help me?,homework_help,en
+q112,I need help with my lesson,homework_help,en
+q113,I cannot solve this angles sum,homework_help,en
+q114,Help me with this exercise,homework_help,en
+q115,How do I work out this expression?,homework_help,en
+q116,I am stuck on question three,homework_help,en
+q117,Can you help me finish this?,homework_help,en
+q118,Help me with my assignment,homework_help,en
+q119,I do not know how to start this problem,homework_help,en
+q120,Please help me solve this,homework_help,en
+q121,What is today's weather?,out_of_scope,en
+q122,Order food for me,out_of_scope,en
+q123,Who won the cricket match?,out_of_scope,en
+q124,Tell me a movie review,out_of_scope,en
+q125,Book a hotel,out_of_scope,en
+q126,Play a song,out_of_scope,en
+q127,Show me funny videos,out_of_scope,en
+q128,Show me the cricket score,out_of_scope,en
+q129,Show me a movie trailer,out_of_scope,en
+q130,What is the news today?,out_of_scope,en
+q131,Who is the prime minister?,out_of_scope,en
+q132,Send a message to my friend,out_of_scope,en
+q133,Show me shopping offers,out_of_scope,en
+q134,Recommend a restaurant,out_of_scope,en
+q135,Book a train ticket,out_of_scope,en
+q136,Show my progress,progress_help,en
+q137,How many quizzes have I completed?,progress_help,en
+q138,What is my score?,progress_help,en
+q139,How many points do I have?,progress_help,en
+q140,Show my learning progress,progress_help,en
+q141,What is my current level?,progress_help,en
+q142,How many badges have I earned?,progress_help,en
+q143,What is my streak?,progress_help,en
+q144,How am I performing?,progress_help,en
+q145,Show my quiz results,progress_help,en
+q146,What is my score in English?,progress_help,en
+q147,How am I doing in Mathematics?,progress_help,en
+q148,What is my Science average?,progress_help,en
+q149,Show my report,progress_help,en
+q150,Am I improving?,progress_help,en
+q151,Give me a quiz,quiz_help,en
+q152,I want to practice questions,quiz_help,en
+q153,Start a quiz for me,quiz_help,en
+q154,Can I test myself?,quiz_help,en
+q155,Show me practice questions,quiz_help,en
+q156,I want to attempt a quiz,quiz_help,en
+q157,Give me some practice problems,quiz_help,en
+q158,Can we do a quiz now?,quiz_help,en
+q159,Test me with some questions,quiz_help,en
+q160,I want to revise with questions,quiz_help,en
+q161,Start the chapter quiz,quiz_help,en
+q162,Give me more questions to practice,quiz_help,en
+q163,Can I take a test?,quiz_help,en
+q164,Quiz me on this chapter,quiz_help,en
+q165,I want practice exercises,quiz_help,en
+q166,What should I study next?,study_advice,en
+q167,How can I improve?,study_advice,en
+q168,Where am I weak?,study_advice,en
+q169,What should I focus on?,study_advice,en
+q170,Which subject do I need to work on?,study_advice,en
+q171,Help me plan what to study,study_advice,en
+q172,What do you suggest I learn?,study_advice,en
+q173,Where should I start?,study_advice,en
+q174,Which chapter should I do next?,study_advice,en
+q175,Tell me what to revise,study_advice,en
+q176,What needs more practice?,study_advice,en
+q177,Suggest something for me to study,study_advice,en
+q178,Where do I need more work?,study_advice,en
+q179,What is the best thing to learn now?,study_advice,en
+q180,Give me a study plan,study_advice,en

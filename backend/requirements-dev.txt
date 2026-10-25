@@ -1,0 +1,5 @@
+# Week 10: testing. Install into the same virtual environment:
+#   pip install -r backend/requirements-dev.txt
+pytest>=8.0
+mongomock==4.3.0
+httpx==0.28.1

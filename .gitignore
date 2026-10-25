@@ -3,3 +3,15 @@ node_modules/
 __pycache__/
 *.pyc
 .vscode/
+.venv/
+
+# Week 6: local model caches (large, re-downloadable)
+.cache/
+nltk_data/
+
+# Textbook PDFs - large, and redistributable from ncert.nic.in
+data/chapters/
+data/lessons_expanded.json 
+
+# Vite build output
+frontend/dist/

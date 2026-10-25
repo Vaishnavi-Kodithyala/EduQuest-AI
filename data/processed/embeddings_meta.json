@@ -1,0 +1,1092 @@
+{
+  "model": "distilbert-base-uncased",
+  "embedding_dim": 768,
+  "max_seq_length": 64,
+  "pooling": "mean_pooling_attention_masked",
+  "normalized": true,
+  "embedded_field": "normalized_text",
+  "num_queries": 180,
+  "generated_at": "2026-09-07T13:39:12.422145+00:00",
+  "rows": [
+    {
+      "index": 0,
+      "id": "q001",
+      "intent": "browse_content",
+      "text": "list the chapters"
+    },
+    {
+      "index": 1,
+      "id": "q002",
+      "intent": "browse_content",
+      "text": "what chapters are there"
+    },
+    {
+      "index": 2,
+      "id": "q003",
+      "intent": "browse_content",
+      "text": "show me all the chapters"
+    },
+    {
+      "index": 3,
+      "id": "q004",
+      "intent": "browse_content",
+      "text": "what subjects can i study"
+    },
+    {
+      "index": 4,
+      "id": "q005",
+      "intent": "browse_content",
+      "text": "which chapters are in science"
+    },
+    {
+      "index": 5,
+      "id": "q006",
+      "intent": "browse_content",
+      "text": "what topics are covered"
+    },
+    {
+      "index": 6,
+      "id": "q007",
+      "intent": "browse_content",
+      "text": "show me the mathematics chapters"
+    },
+    {
+      "index": 7,
+      "id": "q008",
+      "intent": "browse_content",
+      "text": "which topics does this app cover"
+    },
+    {
+      "index": 8,
+      "id": "q009",
+      "intent": "browse_content",
+      "text": "what can i learn here"
+    },
+    {
+      "index": 9,
+      "id": "q010",
+      "intent": "browse_content",
+      "text": "list the available subjects"
+    },
+    {
+      "index": 10,
+      "id": "q011",
+      "intent": "browse_content",
+      "text": "what lessons are available"
+    },
+    {
+      "index": 11,
+      "id": "q012",
+      "intent": "browse_content",
+      "text": "show me the english chapters"
+    },
+    {
+      "index": 12,
+      "id": "q013",
+      "intent": "browse_content",
+      "text": "what is in the syllabus"
+    },
+    {
+      "index": 13,
+      "id": "q014",
+      "intent": "browse_content",
+      "text": "give me the chapter list"
+    },
+    {
+      "index": 14,
+      "id": "q015",
+      "intent": "browse_content",
+      "text": "what lessons does this app have"
+    },
+    {
+      "index": 15,
+      "id": "q016",
+      "intent": "clarification",
+      "text": "i don't understand"
+    },
+    {
+      "index": 16,
+      "id": "q017",
+      "intent": "clarification",
+      "text": "explain that again"
+    },
+    {
+      "index": 17,
+      "id": "q018",
+      "intent": "clarification",
+      "text": "can you explain it more simply"
+    },
+    {
+      "index": 18,
+      "id": "q019",
+      "intent": "clarification",
+      "text": "i am confused about this topic"
+    },
+    {
+      "index": 19,
+      "id": "q020",
+      "intent": "clarification",
+      "text": "please explain this in an easier way"
+    },
+    {
+      "index": 20,
+      "id": "q021",
+      "intent": "clarification",
+      "text": "say that again please"
+    },
+    {
+      "index": 21,
+      "id": "q022",
+      "intent": "clarification",
+      "text": "that was too difficult to follow"
+    },
+    {
+      "index": 22,
+      "id": "q023",
+      "intent": "clarification",
+      "text": "can you repeat that"
+    },
+    {
+      "index": 23,
+      "id": "q024",
+      "intent": "clarification",
+      "text": "i still do not get it"
+    },
+    {
+      "index": 24,
+      "id": "q025",
+      "intent": "clarification",
+      "text": "explain in simple words"
+    },
+    {
+      "index": 25,
+      "id": "q026",
+      "intent": "clarification",
+      "text": "this is confusing"
+    },
+    {
+      "index": 26,
+      "id": "q027",
+      "intent": "clarification",
+      "text": "can you say it differently"
+    },
+    {
+      "index": 27,
+      "id": "q028",
+      "intent": "clarification",
+      "text": "i did not understand your explanation"
+    },
+    {
+      "index": 28,
+      "id": "q029",
+      "intent": "clarification",
+      "text": "make it easier to understand"
+    },
+    {
+      "index": 29,
+      "id": "q030",
+      "intent": "clarification",
+      "text": "explain once more slowly"
+    },
+    {
+      "index": 30,
+      "id": "q031",
+      "intent": "concept_explanation",
+      "text": "explain how camels survive in the desert"
+    },
+    {
+      "index": 31,
+      "id": "q032",
+      "intent": "concept_explanation",
+      "text": "explain how lines and angles work"
+    },
+    {
+      "index": 32,
+      "id": "q033",
+      "intent": "concept_explanation",
+      "text": "how do scientists investigate a question"
+    },
+    {
+      "index": 33,
+      "id": "q034",
+      "intent": "concept_explanation",
+      "text": "explain the order of operations"
+    },
+    {
+      "index": 34,
+      "id": "q035",
+      "intent": "concept_explanation",
+      "text": "how do number patterns work"
+    },
+    {
+      "index": 35,
+      "id": "q036",
+      "intent": "concept_explanation",
+      "text": "explain how litmus paper tests a substance"
+    },
+    {
+      "index": 36,
+      "id": "q037",
+      "intent": "concept_explanation",
+      "text": "explain why animals adapt to their surroundings"
+    },
+    {
+      "index": 37,
+      "id": "q038",
+      "intent": "concept_explanation",
+      "text": "how do you compare very large numbers"
+    },
+    {
+      "index": 38,
+      "id": "q039",
+      "intent": "concept_explanation",
+      "text": "explain what rama natha learned about wealth"
+    },
+    {
+      "index": 39,
+      "id": "q040",
+      "intent": "concept_explanation",
+      "text": "how did gajaraj and the dog become friends"
+    },
+    {
+      "index": 40,
+      "id": "q041",
+      "intent": "concept_explanation",
+      "text": "explain how substances are grouped as acidic or basic"
+    },
+    {
+      "index": 41,
+      "id": "q042",
+      "intent": "concept_explanation",
+      "text": "how do you read large numbers correctly"
+    },
+    {
+      "index": 42,
+      "id": "q043",
+      "intent": "concept_explanation",
+      "text": "explain what the river was trying to say"
+    },
+    {
+      "index": 43,
+      "id": "q044",
+      "intent": "concept_explanation",
+      "text": "explain why education matters in the lesson"
+    },
+    {
+      "index": 44,
+      "id": "q045",
+      "intent": "concept_explanation",
+      "text": "how are angles measured with a protractor"
+    },
+    {
+      "index": 45,
+      "id": "q046",
+      "intent": "definition",
+      "text": "what is an angle"
+    },
+    {
+      "index": 46,
+      "id": "q047",
+      "intent": "definition",
+      "text": "define a ray"
+    },
+    {
+      "index": 47,
+      "id": "q048",
+      "intent": "definition",
+      "text": "what does adaptation mean"
+    },
+    {
+      "index": 48,
+      "id": "q049",
+      "intent": "definition",
+      "text": "what is an acid"
+    },
+    {
+      "index": 49,
+      "id": "q050",
+      "intent": "definition",
+      "text": "what is a pattern"
+    },
+    {
+      "index": 50,
+      "id": "q051",
+      "intent": "definition",
+      "text": "define an arithmetic expression"
+    },
+    {
+      "index": 51,
+      "id": "q052",
+      "intent": "definition",
+      "text": "what is a base"
+    },
+    {
+      "index": 52,
+      "id": "q053",
+      "intent": "definition",
+      "text": "what does neutral mean"
+    },
+    {
+      "index": 53,
+      "id": "q054",
+      "intent": "definition",
+      "text": "what is place value"
+    },
+    {
+      "index": 54,
+      "id": "q055",
+      "intent": "definition",
+      "text": "define a line segment"
+    },
+    {
+      "index": 55,
+      "id": "q056",
+      "intent": "definition",
+      "text": "what is an indicator"
+    },
+    {
+      "index": 56,
+      "id": "q057",
+      "intent": "definition",
+      "text": "what is a sequence"
+    },
+    {
+      "index": 57,
+      "id": "q058",
+      "intent": "definition",
+      "text": "what does habitat mean"
+    },
+    {
+      "index": 58,
+      "id": "q059",
+      "intent": "definition",
+      "text": "what is a protractor"
+    },
+    {
+      "index": 59,
+      "id": "q060",
+      "intent": "definition",
+      "text": "define estimation"
+    },
+    {
+      "index": 60,
+      "id": "q061",
+      "intent": "example_request",
+      "text": "give me an example of a number pattern"
+    },
+    {
+      "index": 61,
+      "id": "q062",
+      "intent": "example_request",
+      "text": "can you give me an example of an acid"
+    },
+    {
+      "index": 62,
+      "id": "q063",
+      "intent": "example_request",
+      "text": "show me an example problem on angles"
+    },
+    {
+      "index": 63,
+      "id": "q064",
+      "intent": "example_request",
+      "text": "give me an example for this topic"
+    },
+    {
+      "index": 64,
+      "id": "q065",
+      "intent": "example_request",
+      "text": "can you show a real life example"
+    },
+    {
+      "index": 65,
+      "id": "q066",
+      "intent": "example_request",
+      "text": "show me a sample question"
+    },
+    {
+      "index": 66,
+      "id": "q067",
+      "intent": "example_request",
+      "text": "give an example of a large number"
+    },
+    {
+      "index": 67,
+      "id": "q068",
+      "intent": "example_request",
+      "text": "can i see a worked example"
+    },
+    {
+      "index": 68,
+      "id": "q069",
+      "intent": "example_request",
+      "text": "show me one more example"
+    },
+    {
+      "index": 69,
+      "id": "q070",
+      "intent": "example_request",
+      "text": "give me a practical example of adaptation"
+    },
+    {
+      "index": 70,
+      "id": "q071",
+      "intent": "example_request",
+      "text": "can you show an example with brackets"
+    },
+    {
+      "index": 71,
+      "id": "q072",
+      "intent": "example_request",
+      "text": "i want to see an example"
+    },
+    {
+      "index": 72,
+      "id": "q073",
+      "intent": "example_request",
+      "text": "show an example of a basic substance"
+    },
+    {
+      "index": 73,
+      "id": "q074",
+      "intent": "example_request",
+      "text": "give me a simple example"
+    },
+    {
+      "index": 74,
+      "id": "q075",
+      "intent": "example_request",
+      "text": "show me how it looks with an example"
+    },
+    {
+      "index": 75,
+      "id": "q076",
+      "intent": "formula_help",
+      "text": "what is the rule for the order of operations"
+    },
+    {
+      "index": 76,
+      "id": "q077",
+      "intent": "formula_help",
+      "text": "which rule applies to this kind of sum"
+    },
+    {
+      "index": 77,
+      "id": "q078",
+      "intent": "formula_help",
+      "text": "how do i simplify this expression"
+    },
+    {
+      "index": 78,
+      "id": "q079",
+      "intent": "formula_help",
+      "text": "what is the rule for simplifying expressions"
+    },
+    {
+      "index": 79,
+      "id": "q080",
+      "intent": "formula_help",
+      "text": "what are the steps in the correct order"
+    },
+    {
+      "index": 80,
+      "id": "q081",
+      "intent": "formula_help",
+      "text": "what is the rule for naming angles"
+    },
+    {
+      "index": 81,
+      "id": "q082",
+      "intent": "formula_help",
+      "text": "how do i estimate a large number"
+    },
+    {
+      "index": 82,
+      "id": "q083",
+      "intent": "formula_help",
+      "text": "which method applies to this sum"
+    },
+    {
+      "index": 83,
+      "id": "q084",
+      "intent": "formula_help",
+      "text": "what steps do i follow for brackets"
+    },
+    {
+      "index": 84,
+      "id": "q085",
+      "intent": "formula_help",
+      "text": "how do i find the value of an expression"
+    },
+    {
+      "index": 85,
+      "id": "q086",
+      "intent": "formula_help",
+      "text": "give me the rule for place value"
+    },
+    {
+      "index": 86,
+      "id": "q087",
+      "intent": "formula_help",
+      "text": "what is the method to compare numbers"
+    },
+    {
+      "index": 87,
+      "id": "q088",
+      "intent": "formula_help",
+      "text": "which method is used to measure an angle"
+    },
+    {
+      "index": 88,
+      "id": "q089",
+      "intent": "formula_help",
+      "text": "what is the correct sequence of steps"
+    },
+    {
+      "index": 89,
+      "id": "q090",
+      "intent": "formula_help",
+      "text": "what rule gives the correct answer here"
+    },
+    {
+      "index": 90,
+      "id": "q091",
+      "intent": "greeting",
+      "text": "hi"
+    },
+    {
+      "index": 91,
+      "id": "q092",
+      "intent": "greeting",
+      "text": "hello"
+    },
+    {
+      "index": 92,
+      "id": "q093",
+      "intent": "greeting",
+      "text": "good morning"
+    },
+    {
+      "index": 93,
+      "id": "q094",
+      "intent": "greeting",
+      "text": "good evening"
+    },
+    {
+      "index": 94,
+      "id": "q095",
+      "intent": "greeting",
+      "text": "hey there"
+    },
+    {
+      "index": 95,
+      "id": "q096",
+      "intent": "greeting",
+      "text": "namaste"
+    },
+    {
+      "index": 96,
+      "id": "q097",
+      "intent": "greeting",
+      "text": "hello sir"
+    },
+    {
+      "index": 97,
+      "id": "q098",
+      "intent": "greeting",
+      "text": "hi teacher"
+    },
+    {
+      "index": 98,
+      "id": "q099",
+      "intent": "greeting",
+      "text": "good afternoon"
+    },
+    {
+      "index": 99,
+      "id": "q100",
+      "intent": "greeting",
+      "text": "hey"
+    },
+    {
+      "index": 100,
+      "id": "q101",
+      "intent": "greeting",
+      "text": "hello there"
+    },
+    {
+      "index": 101,
+      "id": "q102",
+      "intent": "greeting",
+      "text": "hi again"
+    },
+    {
+      "index": 102,
+      "id": "q103",
+      "intent": "greeting",
+      "text": "good morning teacher"
+    },
+    {
+      "index": 103,
+      "id": "q104",
+      "intent": "greeting",
+      "text": "hello friend"
+    },
+    {
+      "index": 104,
+      "id": "q105",
+      "intent": "greeting",
+      "text": "hi i am back"
+    },
+    {
+      "index": 105,
+      "id": "q106",
+      "intent": "homework_help",
+      "text": "help me solve my homework"
+    },
+    {
+      "index": 106,
+      "id": "q107",
+      "intent": "homework_help",
+      "text": "how do i solve this question"
+    },
+    {
+      "index": 107,
+      "id": "q108",
+      "intent": "homework_help",
+      "text": "can you help with this math problem"
+    },
+    {
+      "index": 108,
+      "id": "q109",
+      "intent": "homework_help",
+      "text": "i am stuck on my homework"
+    },
+    {
+      "index": 109,
+      "id": "q110",
+      "intent": "homework_help",
+      "text": "help me answer this quiz question"
+    },
+    {
+      "index": 110,
+      "id": "q111",
+      "intent": "homework_help",
+      "text": "can you help me"
+    },
+    {
+      "index": 111,
+      "id": "q112",
+      "intent": "homework_help",
+      "text": "i need help with my lesson"
+    },
+    {
+      "index": 112,
+      "id": "q113",
+      "intent": "homework_help",
+      "text": "i cannot solve this angles sum"
+    },
+    {
+      "index": 113,
+      "id": "q114",
+      "intent": "homework_help",
+      "text": "help me with this exercise"
+    },
+    {
+      "index": 114,
+      "id": "q115",
+      "intent": "homework_help",
+      "text": "how do i work out this expression"
+    },
+    {
+      "index": 115,
+      "id": "q116",
+      "intent": "homework_help",
+      "text": "i am stuck on question three"
+    },
+    {
+      "index": 116,
+      "id": "q117",
+      "intent": "homework_help",
+      "text": "can you help me finish this"
+    },
+    {
+      "index": 117,
+      "id": "q118",
+      "intent": "homework_help",
+      "text": "help me with my assignment"
+    },
+    {
+      "index": 118,
+      "id": "q119",
+      "intent": "homework_help",
+      "text": "i do not know how to start this problem"
+    },
+    {
+      "index": 119,
+      "id": "q120",
+      "intent": "homework_help",
+      "text": "please help me solve this"
+    },
+    {
+      "index": 120,
+      "id": "q121",
+      "intent": "out_of_scope",
+      "text": "what is today's weather"
+    },
+    {
+      "index": 121,
+      "id": "q122",
+      "intent": "out_of_scope",
+      "text": "order food for me"
+    },
+    {
+      "index": 122,
+      "id": "q123",
+      "intent": "out_of_scope",
+      "text": "who won the cricket match"
+    },
+    {
+      "index": 123,
+      "id": "q124",
+      "intent": "out_of_scope",
+      "text": "tell me a movie review"
+    },
+    {
+      "index": 124,
+      "id": "q125",
+      "intent": "out_of_scope",
+      "text": "book a hotel"
+    },
+    {
+      "index": 125,
+      "id": "q126",
+      "intent": "out_of_scope",
+      "text": "play a song"
+    },
+    {
+      "index": 126,
+      "id": "q127",
+      "intent": "out_of_scope",
+      "text": "show me funny videos"
+    },
+    {
+      "index": 127,
+      "id": "q128",
+      "intent": "out_of_scope",
+      "text": "show me the cricket score"
+    },
+    {
+      "index": 128,
+      "id": "q129",
+      "intent": "out_of_scope",
+      "text": "show me a movie trailer"
+    },
+    {
+      "index": 129,
+      "id": "q130",
+      "intent": "out_of_scope",
+      "text": "what is the news today"
+    },
+    {
+      "index": 130,
+      "id": "q131",
+      "intent": "out_of_scope",
+      "text": "who is the prime minister"
+    },
+    {
+      "index": 131,
+      "id": "q132",
+      "intent": "out_of_scope",
+      "text": "send a message to my friend"
+    },
+    {
+      "index": 132,
+      "id": "q133",
+      "intent": "out_of_scope",
+      "text": "show me shopping offers"
+    },
+    {
+      "index": 133,
+      "id": "q134",
+      "intent": "out_of_scope",
+      "text": "recommend a restaurant"
+    },
+    {
+      "index": 134,
+      "id": "q135",
+      "intent": "out_of_scope",
+      "text": "book a train ticket"
+    },
+    {
+      "index": 135,
+      "id": "q136",
+      "intent": "progress_help",
+      "text": "show my progress"
+    },
+    {
+      "index": 136,
+      "id": "q137",
+      "intent": "progress_help",
+      "text": "how many quizzes have i completed"
+    },
+    {
+      "index": 137,
+      "id": "q138",
+      "intent": "progress_help",
+      "text": "what is my score"
+    },
+    {
+      "index": 138,
+      "id": "q139",
+      "intent": "progress_help",
+      "text": "how many points do i have"
+    },
+    {
+      "index": 139,
+      "id": "q140",
+      "intent": "progress_help",
+      "text": "show my learning progress"
+    },
+    {
+      "index": 140,
+      "id": "q141",
+      "intent": "progress_help",
+      "text": "what is my current level"
+    },
+    {
+      "index": 141,
+      "id": "q142",
+      "intent": "progress_help",
+      "text": "how many badges have i earned"
+    },
+    {
+      "index": 142,
+      "id": "q143",
+      "intent": "progress_help",
+      "text": "what is my streak"
+    },
+    {
+      "index": 143,
+      "id": "q144",
+      "intent": "progress_help",
+      "text": "how am i performing"
+    },
+    {
+      "index": 144,
+      "id": "q145",
+      "intent": "progress_help",
+      "text": "show my quiz results"
+    },
+    {
+      "index": 145,
+      "id": "q146",
+      "intent": "progress_help",
+      "text": "what is my score in english"
+    },
+    {
+      "index": 146,
+      "id": "q147",
+      "intent": "progress_help",
+      "text": "how am i doing in mathematics"
+    },
+    {
+      "index": 147,
+      "id": "q148",
+      "intent": "progress_help",
+      "text": "what is my science average"
+    },
+    {
+      "index": 148,
+      "id": "q149",
+      "intent": "progress_help",
+      "text": "show my report"
+    },
+    {
+      "index": 149,
+      "id": "q150",
+      "intent": "progress_help",
+      "text": "am i improving"
+    },
+    {
+      "index": 150,
+      "id": "q151",
+      "intent": "quiz_help",
+      "text": "give me a quiz"
+    },
+    {
+      "index": 151,
+      "id": "q152",
+      "intent": "quiz_help",
+      "text": "i want to practice questions"
+    },
+    {
+      "index": 152,
+      "id": "q153",
+      "intent": "quiz_help",
+      "text": "start a quiz for me"
+    },
+    {
+      "index": 153,
+      "id": "q154",
+      "intent": "quiz_help",
+      "text": "can i test myself"
+    },
+    {
+      "index": 154,
+      "id": "q155",
+      "intent": "quiz_help",
+      "text": "show me practice questions"
+    },
+    {
+      "index": 155,
+      "id": "q156",
+      "intent": "quiz_help",
+      "text": "i want to attempt a quiz"
+    },
+    {
+      "index": 156,
+      "id": "q157",
+      "intent": "quiz_help",
+      "text": "give me some practice problems"
+    },
+    {
+      "index": 157,
+      "id": "q158",
+      "intent": "quiz_help",
+      "text": "can we do a quiz now"
+    },
+    {
+      "index": 158,
+      "id": "q159",
+      "intent": "quiz_help",
+      "text": "test me with some questions"
+    },
+    {
+      "index": 159,
+      "id": "q160",
+      "intent": "quiz_help",
+      "text": "i want to revise with questions"
+    },
+    {
+      "index": 160,
+      "id": "q161",
+      "intent": "quiz_help",
+      "text": "start the chapter quiz"
+    },
+    {
+      "index": 161,
+      "id": "q162",
+      "intent": "quiz_help",
+      "text": "give me more questions to practice"
+    },
+    {
+      "index": 162,
+      "id": "q163",
+      "intent": "quiz_help",
+      "text": "can i take a test"
+    },
+    {
+      "index": 163,
+      "id": "q164",
+      "intent": "quiz_help",
+      "text": "quiz me on this chapter"
+    },
+    {
+      "index": 164,
+      "id": "q165",
+      "intent": "quiz_help",
+      "text": "i want practice exercises"
+    },
+    {
+      "index": 165,
+      "id": "q166",
+      "intent": "study_advice",
+      "text": "what should i study next"
+    },
+    {
+      "index": 166,
+      "id": "q167",
+      "intent": "study_advice",
+      "text": "how can i improve"
+    },
+    {
+      "index": 167,
+      "id": "q168",
+      "intent": "study_advice",
+      "text": "where am i weak"
+    },
+    {
+      "index": 168,
+      "id": "q169",
+      "intent": "study_advice",
+      "text": "what should i focus on"
+    },
+    {
+      "index": 169,
+      "id": "q170",
+      "intent": "study_advice",
+      "text": "which subject do i need to work on"
+    },
+    {
+      "index": 170,
+      "id": "q171",
+      "intent": "study_advice",
+      "text": "help me plan what to study"
+    },
+    {
+      "index": 171,
+      "id": "q172",
+      "intent": "study_advice",
+      "text": "what do you suggest i learn"
+    },
+    {
+      "index": 172,
+      "id": "q173",
+      "intent": "study_advice",
+      "text": "where should i start"
+    },
+    {
+      "index": 173,
+      "id": "q174",
+      "intent": "study_advice",
+      "text": "which chapter should i do next"
+    },
+    {
+      "index": 174,
+      "id": "q175",
+      "intent": "study_advice",
+      "text": "tell me what to revise"
+    },
+    {
+      "index": 175,
+      "id": "q176",
+      "intent": "study_advice",
+      "text": "what needs more practice"
+    },
+    {
+      "index": 176,
+      "id": "q177",
+      "intent": "study_advice",
+      "text": "suggest something for me to study"
+    },
+    {
+      "index": 177,
+      "id": "q178",
+      "intent": "study_advice",
+      "text": "where do i need more work"
+    },
+    {
+      "index": 178,
+      "id": "q179",
+      "intent": "study_advice",
+      "text": "what is the best thing to learn now"
+    },
+    {
+      "index": 179,
+      "id": "q180",
+      "intent": "study_advice",
+      "text": "give me a study plan"
+    }
+  ]
+}

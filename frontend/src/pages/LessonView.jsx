@@ -1,65 +1,127 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
+import Reward from '../components/Reward';
 import { api } from '../services/api';
+import { chapterNumber, plain, sentenceCase } from '../utils/text';
 
-export default function LessonView({ lesson, user, level, streak, onBack, onQuiz, onLogout }) {
+// Section headings in the chapter content start with an emoji.
+const HEADING = /^\p{Extended_Pictographic}/u;
+
+// Chapters taken from the textbook PDFs arrive as very long paragraphs.
+// Break them every 60 words or so, at the end of a sentence.
+function paragraphs(text) {
+  if (text.split(/\s+/).length <= 90) return [text];
+  const out = [];
+  let current = [];
+  let words = 0;
+  for (const sentence of text.split(/(?<=[.!?]["”’]?)\s+(?=[A-Z“"‘])/)) {
+    current.push(sentence);
+    words += sentence.split(/\s+/).length;
+    if (words >= 60) {
+      out.push(current.join(' '));
+      current = [];
+      words = 0;
+    }
+  }
+  if (current.length) out.push(current.join(' '));
+  return out;
+}
+
+export default function LessonView({ lesson, user, streak, game, completedLessons = [], onBack, onQuiz, onCompleted }) {
   const [quiz, setQuiz] = useState(null);
+  const [marking, setMarking] = useState(false);
+  const [reward, setReward] = useState(null);
+  const [error, setError] = useState('');
+
+  const isRead = lesson ? completedLessons.includes(lesson.id) || reward !== null : false;
+  const mark = lesson ? game?.quiz_marks?.[lesson.id] : null;
+
+  async function markAsRead() {
+    if (marking || !lesson) return;
+    setMarking(true);
+    setError('');
+    try {
+      const result = await api.completeLesson(lesson.id, user.id);
+      setReward(result);
+      if (onCompleted) onCompleted();
+    } catch (err) {
+      setError('Could not save. Check that the server is running.');
+    } finally {
+      setMarking(false);
+    }
+  }
 
   useEffect(() => {
     if (!lesson) return;
-    api.quizzes({ grade: user.grade, subject: lesson.subject })
-      .then(quizzes => {
-        const chapterQuiz = quizzes.find(q => q.lesson_id === lesson.id);
-        setQuiz(chapterQuiz || null);
-      })
-      .catch(() => setQuiz(null));
-  }, [lesson, user.grade]);
+    window.scrollTo(0, 0);
+    api.quiz(`q-${lesson.id}`).then(setQuiz).catch(() => setQuiz(null));
+  }, [lesson]);
 
   if (!lesson) {
     return (
       <main className="container">
-        <button onClick={onBack}>Back</button>
+        <button className="back" onClick={onBack}>Back to chapters</button>
       </main>
     );
   }
 
-  const sections = String(lesson.content || '')
-    .split('\n')
-    .map(x => x.trim())
-    .filter(Boolean);
+  // Bullets in the PDF text come through as control characters; each starts a
+  // new line.
+  const lines = String(lesson.content || '').replace(/[\u0080-\u009f]/g, '\n')
+    .split('\n').map(x => x.trim()).filter(Boolean);
+  const summary = plain(lesson.summary);
+  // For chapters from the PDFs the summary is a passage from the chapter itself.
+  const showSummary = summary && !lines.join(' ').includes(summary.slice(0, 40));
 
   return (
     <>
-      <Header user={user} onHome={onBack} onLessons={onBack} onLogout={onLogout} level={level} streak={streak} />
+      <Header user={user} streak={streak} />
 
       <main className="container">
-        <button className="link" onClick={onBack}>← Lessons</button>
+        <button className="back" onClick={onBack}>← All chapters</button>
 
-        <article className="card lesson-view">
-          <span className="tag">{lesson.subject}</span>
+        <article className="reading">
+          <span className="subject">{lesson.subject}, chapter {chapterNumber(lesson.id)}</span>
           <h1>{lesson.title}</h1>
-          <p className="summary">{lesson.summary}</p>
+          {showSummary && <p className="summary">{summary}</p>}
 
-          <div className="content-text">
-            {sections.map((line, index) => {
-              const isHeading = /^[🌟🔎🌱💡🧠🎯📐🔢🧪🌍🐾❤️🏠📚🪖🤝🧐❓⚙️]/u.test(line);
-              return isHeading ? <h3 key={index}>{line}</h3> : <p key={index}>{line}</p>;
-            })}
+          <div className="reading-text">
+            {lines.map((line, i) => (HEADING.test(line) && line.length < 80
+              ? <h3 key={i}>{sentenceCase(line)}</h3>
+              : paragraphs(line).map((text, j) => <p key={`${i}-${j}`}>{text}</p>)))}
           </div>
 
-          {quiz ? (
-            <div className="quiz-section">
-              <h2>🎯 Chapter Quiz</h2>
-              <p>{quiz.questions.length} questions based on this chapter. Answer them to earn XP!</p>
-              <button className="primary" onClick={() => onQuiz(quiz)}>
-                Take Chapter Quiz →
+          <section className="chapter-end">
+            {isRead ? (
+              <>
+                <div className="done-line"><span className="tick big">✓</span><h2>You have read this chapter</h2></div>
+                {reward && !reward.already_completed
+                  ? <Reward result={reward} />
+                  : <p>Take the quiz below to check what you remember.</p>}
+              </>
+            ) : (
+              <>
+                <h2>Finished reading?</h2>
+                <p>Mark the chapter as read to get 20 XP and keep your streak going.</p>
+                <button className="btn" onClick={markAsRead} disabled={marking}>
+                  {marking ? 'Saving…' : 'Mark as read'}
+                </button>
+                {error && <div className="error">{error}</div>}
+              </>
+            )}
+          </section>
+
+          {quiz && (
+            <section className="chapter-end">
+              <h2>Chapter quiz</h2>
+              <p>
+                {quiz.questions.length} questions. You get 10 XP for each correct answer.
+                {mark && <> Your last score was <span className="quiz-mark">{mark.latest}%</span>.</>}
+              </p>
+              <button className={isRead ? 'btn' : 'btn-quiet'} onClick={() => onQuiz(quiz)}>
+                {mark ? 'Take the quiz again' : 'Take the quiz'}
               </button>
-            </div>
-          ) : (
-            <div className="quiz-section complete-banner">
-              <h2>✅ Chapter read</h2>
-              <p>Great work making it through this chapter.</p>
-            </div>
+            </section>
           )}
         </article>
       </main>

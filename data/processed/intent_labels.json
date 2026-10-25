@@ -1,0 +1,17 @@
+{
+  "labels": [
+    "browse_content",
+    "clarification",
+    "concept_explanation",
+    "definition",
+    "example_request",
+    "formula_help",
+    "greeting",
+    "homework_help",
+    "out_of_scope",
+    "progress_help",
+    "quiz_help",
+    "study_advice"
+  ],
+  "input_dim": 768
+}

@@ -1,34 +1,47 @@
-import React from 'react';
-import XPBar from './XPBar';
+import React, { useContext } from 'react';
 import { avatarForUser } from '../utils/gamify';
+import { NavContext } from '../context/nav';
 
-export default function Header({ user, onHome, onLessons, onLogout, level, streak }) {
-  const avatar = avatarForUser(user);
+const PAGES = [
+  { key: 'home', label: 'Home', match: ['dashboard'] },
+  { key: 'lessons', label: 'Chapters', match: ['lessons', 'lesson', 'quiz'] },
+  { key: 'leaderboard', label: 'Leaderboard', match: ['leaderboard'] },
+  { key: 'chat', label: 'Ask a question', match: ['chat'] },
+];
+
+export default function Header({ user, streak }) {
+  // Navigation comes from App, so every page's header behaves the same way.
+  const nav = useContext(NavContext) || {};
+  const xp = nav.game?.xp;
+
   return (
     <header className="topbar">
-      <div className="brand" onClick={onHome}>
-        <span className="brand-mark">🎓</span>
-        <span>EduQuest</span>
-      </div>
+      <div className="topbar-inner">
+        <button className="brand" onClick={nav.home}>EduQuest</button>
 
-      <nav className="topbar-nav">
-        <button onClick={onHome}>Dashboard</button>
-        <button onClick={onLessons}>Quest Map</button>
-      </nav>
+        <nav className="topbar-nav" aria-label="Main">
+          {PAGES.map(p => (
+            <button key={p.key} className={p.match.includes(nav.page) ? 'nav-active' : ''}
+                    aria-current={p.match.includes(nav.page) ? 'page' : undefined}
+                    onClick={nav[p.key]}>
+              {p.label}
+            </button>
+          ))}
+        </nav>
 
-      <div className="topbar-right">
-        {streak > 0 && (
-          <span className="streak-chip" title={`${streak} day streak`}>
-            🔥 <b>{streak}</b>
-          </span>
-        )}
-        {level && (
-          <div className="topbar-xp">
-            <XPBar {...level} compact />
-          </div>
-        )}
-        <span className="avatar-chip">{avatar}</span>
-        <button className="logout" onClick={onLogout}>Logout</button>
+        <div className="topbar-right">
+          {xp !== undefined && (
+            <span className="topbar-xp" title="Your XP">
+              {xp.toLocaleString('en-IN')} XP
+              {streak > 0 && <small>{streak}-day streak</small>}
+            </span>
+          )}
+          <button className="topbar-user" onClick={nav.settings} title="Avatar and language">
+            <span className="avatar" aria-hidden="true">{avatarForUser(user)}</span>
+            <span className="name">{user.username}</span>
+          </button>
+          <button className="topbar-logout" onClick={nav.logout}>Log out</button>
+        </div>
       </div>
     </header>
   );

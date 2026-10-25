@@ -1,119 +1,124 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import { api } from '../services/api';
+import { SUBJECTS, chapterNumber, plain } from '../utils/text';
 
-const SUBJECT_ICONS = {
-  English: '📖',
-  Mathematics: '📐',
-  Science: '🧪',
-  Telugu: '📝'
-};
+const LANGUAGE_NAMES = { en: 'English', te: 'Telugu', hi: 'Hindi' };
 
-export default function Lessons({ user, level, streak, onBack, onOpenLesson, onOpenQuiz, onLogout }) {
-  const [lessons, setLessons] = useState([]);
-  const [quizzes, setQuizzes] = useState([]);
+function ChapterRow({ lesson, read, mark, onOpenLesson, onOpenQuiz }) {
+  return (
+    <li>
+      <span className="chapter-no" aria-hidden="true">{chapterNumber(lesson.id)}</span>
+      <div className="chapter-body">
+        <h3>
+          <button onClick={() => onOpenLesson(lesson)}>
+            <span className="sr-only">Chapter {chapterNumber(lesson.id)}: </span>{lesson.title}
+          </button>
+        </h3>
+        <p>{plain(lesson.summary)}</p>
+      </div>
+      <div className="chapter-side">
+        {read && <span className="tick">✓ read</span>}
+        {mark ? (
+          <button className="mark-btn" onClick={() => onOpenQuiz(lesson.id)} title="Take the quiz again">
+            <span className={`quiz-mark ${mark.latest < 60 ? 'low' : ''}`}>quiz {mark.latest}%</span>
+          </button>
+        ) : (
+          <button className="btn-quiet" onClick={() => onOpenQuiz(lesson.id)}>Take the quiz</button>
+        )}
+      </div>
+    </li>
+  );
+}
+
+export default function Lessons({ user, streak, game, completedLessons = [], onOpenLesson, onOpenQuiz }) {
+  const [lessons, setLessons] = useState(null);
   const [subject, setSubject] = useState('');
+  const [usingFallback, setUsingFallback] = useState(false);
 
-  const subjects = ['English', 'Mathematics', 'Science', 'Telugu'];
+  useEffect(() => {
+    // Only the latest request may update the page. Without this, clicking
+    // Science while the slower "All subjects" list is still loading let that
+    // list arrive last and overwrite the Science chapters.
+    let current = true;
+    const params = { grade: user.grade, subject };
 
-  const load = () => {
-    api.lessons({ grade: user.grade, language: user.language, subject })
-      .then(setLessons).catch(() => setLessons([]));
-    api.quizzes({ grade: user.grade, subject })
-      .then(setQuizzes).catch(() => setQuizzes([]));
-  };
+    // If nothing exists in the student's language, fall back to English rather
+    // than showing an empty page.
+    api.lessons({ ...params, language: user.language })
+      .then(data => {
+        if (data.length === 0 && user.language !== 'en') {
+          return api.lessons({ ...params, language: 'en' })
+            .then(englishData => ({ list: englishData, fallback: englishData.length > 0 }));
+        }
+        return { list: data, fallback: false };
+      })
+      .then(({ list, fallback }) => {
+        if (!current) return;
+        setUsingFallback(fallback);
+        setLessons(list);
+      })
+      .catch(() => { if (current) { setUsingFallback(false); setLessons([]); } });
 
-  useEffect(() => { load(); }, [user.grade, user.language, subject]);
+    return () => { current = false; };
+  }, [user.grade, user.language, subject]);
+
+  const marks = game?.quiz_marks || {};
+  const readSet = new Set(completedLessons);
+  const tabs = [...SUBJECTS, ''];   // "All subjects" last
+  const groups = subject ? [subject] : SUBJECTS;
+  const row = lesson => (
+    <ChapterRow key={lesson.id} lesson={lesson} read={readSet.has(lesson.id)} mark={marks[lesson.id]}
+                onOpenLesson={onOpenLesson} onOpenQuiz={onOpenQuiz} />
+  );
 
   return (
     <>
-      <Header user={user} onHome={onBack} onLessons={() => {}} onLogout={onLogout} level={level} streak={streak} />
+      <Header user={user} streak={streak} />
 
       <main className="container">
-        <div className="page-head">
-          <button className="link" onClick={onBack}>← Dashboard</button>
-          <span className="eyebrow">QUEST MAP</span>
-          <h1>Explore Your Lessons 📚</h1>
-          <p>Choose a subject, explore a chapter and test what you have learned with its chapter quiz.</p>
+        <div className="page-title">
+          <h1>Chapters</h1>
+          <p>Every Grade {user.grade} chapter from your textbooks. Read a chapter, then take its quiz to check what you remember.</p>
         </div>
 
-        <div className="filters pill-filters">
-          <button className={`pill ${subject === '' ? 'pill-active' : ''}`} onClick={() => setSubject('')}>
-            🗺️ All subjects
-          </button>
-          {subjects.map(s => (
-            <button
-              key={s}
-              className={`pill ${subject === s ? 'pill-active' : ''}`}
-              onClick={() => setSubject(s)}
-            >
-              {SUBJECT_ICONS[s]} {s}
+        <div className="tabs" role="tablist" aria-label="Subject">
+          {tabs.map(s => (
+            <button key={s || 'all'} role="tab" aria-selected={subject === s}
+                    className={subject === s ? 'active' : ''} onClick={() => setSubject(s)}>
+              {s || 'All subjects'}
             </button>
           ))}
         </div>
 
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">GRADE {user.grade}</span>
-            <h2>{subject || 'All Subjects'}</h2>
-          </div>
-          <span className="lesson-count">
-            {lessons.length} {lessons.length === 1 ? 'chapter' : 'chapters'}
-          </span>
-        </div>
-
-        {lessons.length === 0 ? (
-          <div className="card empty-state">
-            <h3>No chapters available yet 📖</h3>
-            <p>Try another subject or check your language selection.</p>
-          </div>
-        ) : (
-          <div className="grid cards">
-            {lessons.map((lesson, index) => (
-              <article className="card lesson quest-card" key={lesson.id}>
-                <div className="lesson-top">
-                  <span className="tag">{SUBJECT_ICONS[lesson.subject] || '📘'} {lesson.subject}</span>
-                  <span className="chapter-number">Chapter {index + 1}</span>
-                </div>
-                <h3>{lesson.title}</h3>
-                <p>{lesson.summary}</p>
-                <button className="primary" onClick={() => onOpenLesson(lesson)}>
-                  Explore Chapter →
-                </button>
-              </article>
-            ))}
-          </div>
+        {usingFallback && (
+          <p className="notice">
+            These chapters are not available in {LANGUAGE_NAMES[user.language] || user.language} yet, so they are shown in English.
+          </p>
         )}
 
-        <div className="section-heading quiz-heading">
-          <div>
-            <span className="eyebrow">TEST YOURSELF</span>
-            <h2>Chapter Quizzes 🎯</h2>
-          </div>
-          <span className="lesson-count">{quizzes.length} quizzes</span>
-        </div>
-
-        {quizzes.length === 0 ? (
-          <div className="card empty-state">
-            <h3>No quizzes available yet 🎯</h3>
-            <p>Chapter quizzes will appear here when available.</p>
-          </div>
+        {lessons === null ? (
+          <p className="empty">Loading chapters…</p>
+        ) : lessons.length === 0 ? (
+          <p className="empty">No chapters found. Check that the server is running and the content is loaded (python -m backend.seed).</p>
         ) : (
-          <div className="grid cards">
-            {quizzes.map(quiz => (
-              <article className="card lesson quiz-card" key={quiz.id}>
-                <div className="lesson-top">
-                  <span className="tag quiztag">🎯 Quiz</span>
-                  <span className="chapter-number">{quiz.questions?.length || 0} questions</span>
-                </div>
-                <h3>{quiz.title}</h3>
-                <p>Ready to see how much you remember from this chapter?</p>
-                <button className="secondary" onClick={() => onOpenQuiz(quiz)}>
-                  Start Chapter Quiz →
-                </button>
-              </article>
-            ))}
-          </div>
+          groups.map(g => {
+            const list = lessons.filter(l => l.subject === g);
+            if (list.length === 0) return null;
+            const done = list.filter(l => readSet.has(l.id)).length;
+            return (
+              <section className="subject-group" key={g}>
+                {!subject && (
+                  <div className="section-title" style={{ marginTop: 0, marginBottom: 10 }}>
+                    <h2>{g}</h2>
+                    <p>{done} of {list.length} read</p>
+                  </div>
+                )}
+                {subject && <p className="chapter-count">{done} of {list.length} chapters read</p>}
+                <ul className="chapters">{list.map(row)}</ul>
+              </section>
+            );
+          })
         )}
       </main>
     </>

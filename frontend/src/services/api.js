@@ -71,6 +71,39 @@ export const api = {
   progress: (userId) =>
     request(`/progress/${userId}`),
 
+  gamification: (userId) =>
+    request(`/gamification/${userId}`),
+
+  leaderboard: (params = {}) =>
+    request('/leaderboard?' + new URLSearchParams(params)),
+
+  completeLesson: (lessonId, userId) =>
+    request(`/lessons/${lessonId}/complete`, {
+      method: 'POST',
+      body: JSON.stringify({ user_id: userId })
+    }),
+
+  updateProfile: (userId, payload) =>
+    request(`/auth/profile/${userId}`, {
+      method: 'PATCH',
+      body: JSON.stringify(payload)
+    }),
+
+  chat: (payload) =>
+    request('/chat', {
+      method: 'POST',
+      body: JSON.stringify(payload)
+    }),
+
+  recommendations: (userId, params = {}) =>
+    request(`/recommendations/${userId}?` + new URLSearchParams(params)),
+
+  teacherClass: (teacherId, params = {}) =>
+    request('/teacher/class?' + new URLSearchParams({ teacher_id: teacherId, ...params })),
+
+  teacherStudent: (teacherId, studentId) =>
+    request(`/teacher/students/${studentId}?` + new URLSearchParams({ teacher_id: teacherId })),
+
   health: () =>
     request('/health')
 };

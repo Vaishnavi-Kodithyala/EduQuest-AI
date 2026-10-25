@@ -14,11 +14,13 @@ export default function Register({ onLogin, onRegistered }) {
     setError('');
     setLoading(true);
     try {
-      const r = await api.register({ ...form, grade: Number(form.grade) });
+      const r = await api.register({ ...form, avatar });
       setAvatarForUser(r.user, avatar);
       onRegistered(r.user);
     } catch (err) {
-      setError(err.message);
+      setError(err.message === 'Failed to fetch'
+        ? 'Cannot reach the server. Check that the backend is running.'
+        : err.message);
     } finally {
       setLoading(false);
     }
@@ -26,48 +28,39 @@ export default function Register({ onLogin, onRegistered }) {
 
   return (
     <main className="auth-page">
-      <div className="auth-mascot">🧭</div>
-      <form className="card auth-card" onSubmit={submit}>
-        <div className="logo">🎓 EduQuest</div>
-        <h1>Start your quest</h1>
-        <p>Pick an avatar, choose your grade and preferred language.</p>
+      <form className="auth-card ruled" onSubmit={submit}>
+        <div className="auth-brand">EduQuest</div>
+        <h1>Create your account</h1>
+        <p>For Grade 6 students.</p>
 
-        <label>Pick your avatar</label>
-        <div className="avatar-picker">
+        <p className="field-label">Choose a picture for your profile</p>
+        <div className="avatar-picker" role="radiogroup" aria-label="Profile picture">
           {AVATARS.map(a => (
-            <button
-              type="button"
-              key={a}
-              className={`avatar-option ${avatar === a ? 'avatar-option-selected' : ''}`}
-              onClick={() => setAvatar(a)}
-            >
+            <button type="button" key={a} role="radio" aria-checked={avatar === a}
+                    className={`avatar-option ${avatar === a ? 'selected' : ''}`} onClick={() => setAvatar(a)}>
               {a}
             </button>
           ))}
         </div>
 
         <label>Username
-          <input value={form.username} onChange={e => change('username', e.target.value)} minLength="3" required />
+          <input value={form.username} onChange={e => change('username', e.target.value)} minLength="3" autoComplete="username" required />
         </label>
-        <label>Password
-          <input type="password" value={form.password} onChange={e => change('password', e.target.value)} minLength="6" required />
+        <label>Password (at least 6 characters)
+          <input type="password" value={form.password} onChange={e => change('password', e.target.value)} minLength="6" autoComplete="new-password" required />
         </label>
-        <label>Grade
-          <select value={form.grade} onChange={e => change('grade', e.target.value)}>
-            <option value="6">Grade 6</option>
-            <option value="7">Grade 7</option>
-          </select>
-        </label>
-        <label>Preferred language
+        <label>Language you prefer
           <select value={form.language} onChange={e => change('language', e.target.value)}>
             <option value="en">English</option>
-            <option value="te">Telugu</option>
-            <option value="hi">Hindi</option>
+            <option value="te">తెలుగు (Telugu)</option>
+            <option value="hi">हिंदी (Hindi)</option>
           </select>
         </label>
         {error && <div className="error">{error}</div>}
-        <button className="primary" disabled={loading}>{loading ? 'Creating…' : 'Begin quest →'}</button>
-        <button type="button" className="link" onClick={onLogin}>Already have an account? Login</button>
+        <button className="btn" disabled={loading}>{loading ? 'Creating your account…' : 'Create account'}</button>
+        <p className="auth-switch">
+          Already have an account? <button type="button" className="link" onClick={onLogin}>Log in</button>
+        </p>
       </form>
     </main>
   );

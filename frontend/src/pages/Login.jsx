@@ -15,7 +15,9 @@ export default function Login({ onRegister, onLoggedIn }) {
       const r = await api.login({ username, password });
       onLoggedIn(r.user);
     } catch (err) {
-      setError(err.message);
+      setError(err.message === 'Failed to fetch'
+        ? 'Cannot reach the server. Check that the backend is running.'
+        : err.message);
     } finally {
       setLoading(false);
     }
@@ -23,22 +25,24 @@ export default function Login({ onRegister, onLoggedIn }) {
 
   return (
     <main className="auth-page">
-      <div className="auth-mascot">🦉</div>
-      <form className="card auth-card" onSubmit={submit}>
-        <div className="logo">🎓 EduQuest</div>
-        <h1>Welcome back, adventurer</h1>
-        <p>Continue your learning quest.</p>
+      <form className="auth-card ruled" onSubmit={submit}>
+        <div className="auth-brand">EduQuest</div>
+        <h1>Log in</h1>
+        <p>Grade 6 chapters, quizzes and a question helper for English, Maths, Science and Telugu.</p>
         <label>
           Username
-          <input value={username} onChange={e => setUsername(e.target.value)} required />
+          <input value={username} onChange={e => setUsername(e.target.value)} autoComplete="username" required />
         </label>
         <label>
           Password
-          <input type="password" value={password} onChange={e => setPassword(e.target.value)} required />
+          <input type="password" value={password} onChange={e => setPassword(e.target.value)} autoComplete="current-password" required />
         </label>
         {error && <div className="error">{error}</div>}
-        <button className="primary" disabled={loading}>{loading ? 'Logging in…' : 'Log in →'}</button>
-        <button type="button" className="link" onClick={onRegister}>New here? Create an account</button>
+        <button className="btn" disabled={loading}>{loading ? 'Logging in…' : 'Log in'}</button>
+        <p className="auth-switch">
+          New here? <button type="button" className="link" onClick={onRegister}>Create an account</button>
+        </p>
+        <p className="auth-note">Teachers log in here too, with the account made for them.</p>
       </form>
     </main>
   );

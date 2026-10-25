@@ -1,302 +1,1082 @@
 [
   {
-    "id": "q1",
-    "query": "Hi",
-    "intent": "greeting",
+    "id": "q001",
+    "query": "List the chapters",
+    "intent": "browse_content",
     "language": "en"
   },
   {
-    "id": "q2",
-    "query": "Hello",
-    "intent": "greeting",
+    "id": "q002",
+    "query": "What chapters are there?",
+    "intent": "browse_content",
     "language": "en"
   },
   {
-    "id": "q3",
-    "query": "Can you help me?",
-    "intent": "greeting",
+    "id": "q003",
+    "query": "Show me all the chapters",
+    "intent": "browse_content",
     "language": "en"
   },
   {
-    "id": "q4",
-    "query": "Good morning",
-    "intent": "greeting",
+    "id": "q004",
+    "query": "What subjects can I study?",
+    "intent": "browse_content",
     "language": "en"
   },
   {
-    "id": "q5",
-    "query": "I need help with my lesson",
-    "intent": "greeting",
+    "id": "q005",
+    "query": "Which chapters are in Science?",
+    "intent": "browse_content",
     "language": "en"
   },
   {
-    "id": "q6",
-    "query": "Explain photosynthesis",
-    "intent": "concept_explanation",
+    "id": "q006",
+    "query": "What topics are covered?",
+    "intent": "browse_content",
     "language": "en"
   },
   {
-    "id": "q7",
-    "query": "Can you explain simple interest?",
-    "intent": "concept_explanation",
+    "id": "q007",
+    "query": "Show me the Mathematics chapters",
+    "intent": "browse_content",
     "language": "en"
   },
   {
-    "id": "q8",
-    "query": "Explain the water cycle",
-    "intent": "concept_explanation",
+    "id": "q008",
+    "query": "Which topics does this app cover?",
+    "intent": "browse_content",
     "language": "en"
   },
   {
-    "id": "q9",
-    "query": "What is a fraction?",
-    "intent": "concept_explanation",
+    "id": "q009",
+    "query": "What can I learn here?",
+    "intent": "browse_content",
     "language": "en"
   },
   {
-    "id": "q10",
-    "query": "Explain states of matter",
-    "intent": "concept_explanation",
+    "id": "q010",
+    "query": "List the available subjects",
+    "intent": "browse_content",
     "language": "en"
   },
   {
-    "id": "q11",
-    "query": "What is a numerator?",
-    "intent": "definition",
+    "id": "q011",
+    "query": "What lessons are available?",
+    "intent": "browse_content",
     "language": "en"
   },
   {
-    "id": "q12",
-    "query": "Define evaporation",
-    "intent": "definition",
+    "id": "q012",
+    "query": "Show me the English chapters",
+    "intent": "browse_content",
     "language": "en"
   },
   {
-    "id": "q13",
-    "query": "What is the denominator?",
-    "intent": "definition",
+    "id": "q013",
+    "query": "What is in the syllabus?",
+    "intent": "browse_content",
     "language": "en"
   },
   {
-    "id": "q14",
-    "query": "What does condensation mean?",
-    "intent": "definition",
+    "id": "q014",
+    "query": "Give me the chapter list",
+    "intent": "browse_content",
     "language": "en"
   },
   {
-    "id": "q15",
-    "query": "Define a solid",
-    "intent": "definition",
+    "id": "q015",
+    "query": "What lessons does this app have?",
+    "intent": "browse_content",
     "language": "en"
   },
   {
-    "id": "q16",
-    "query": "Give me an example of simple interest",
-    "intent": "example_request",
-    "language": "en"
-  },
-  {
-    "id": "q17",
-    "query": "Can you give me an example of a fraction?",
-    "intent": "example_request",
-    "language": "en"
-  },
-  {
-    "id": "q18",
-    "query": "Show me an example problem",
-    "intent": "example_request",
-    "language": "en"
-  },
-  {
-    "id": "q19",
-    "query": "Give me an example for this topic",
-    "intent": "example_request",
-    "language": "en"
-  },
-  {
-    "id": "q20",
-    "query": "Can you show a real life example?",
-    "intent": "example_request",
-    "language": "en"
-  },
-  {
-    "id": "q21",
-    "query": "What is the simple interest formula?",
-    "intent": "formula_help",
-    "language": "en"
-  },
-  {
-    "id": "q22",
-    "query": "Which formula should I use?",
-    "intent": "formula_help",
-    "language": "en"
-  },
-  {
-    "id": "q23",
-    "query": "How do I calculate interest?",
-    "intent": "formula_help",
-    "language": "en"
-  },
-  {
-    "id": "q24",
-    "query": "Tell me the formula for this problem",
-    "intent": "formula_help",
-    "language": "en"
-  },
-  {
-    "id": "q25",
-    "query": "Help me remember the formula",
-    "intent": "formula_help",
-    "language": "en"
-  },
-  {
-    "id": "q26",
-    "query": "Help me solve my homework",
-    "intent": "homework_help",
-    "language": "en"
-  },
-  {
-    "id": "q27",
-    "query": "How do I solve this question?",
-    "intent": "homework_help",
-    "language": "en"
-  },
-  {
-    "id": "q28",
-    "query": "Can you help with this maths problem?",
-    "intent": "homework_help",
-    "language": "en"
-  },
-  {
-    "id": "q29",
-    "query": "I am stuck on my homework",
-    "intent": "homework_help",
-    "language": "en"
-  },
-  {
-    "id": "q30",
-    "query": "Help me answer this quiz question",
-    "intent": "homework_help",
-    "language": "en"
-  },
-  {
-    "id": "q31",
+    "id": "q016",
     "query": "I don't understand",
     "intent": "clarification",
     "language": "en"
   },
   {
-    "id": "q32",
+    "id": "q017",
     "query": "Explain that again",
     "intent": "clarification",
     "language": "en"
   },
   {
-    "id": "q33",
+    "id": "q018",
     "query": "Can you explain it more simply?",
     "intent": "clarification",
     "language": "en"
   },
   {
-    "id": "q34",
+    "id": "q019",
     "query": "I am confused about this topic",
     "intent": "clarification",
     "language": "en"
   },
   {
-    "id": "q35",
+    "id": "q020",
     "query": "Please explain this in an easier way",
     "intent": "clarification",
     "language": "en"
   },
   {
-    "id": "q36",
-    "query": "Give me a quiz",
-    "intent": "quiz_help",
+    "id": "q021",
+    "query": "Say that again please",
+    "intent": "clarification",
     "language": "en"
   },
   {
-    "id": "q37",
-    "query": "I want to practice questions",
-    "intent": "quiz_help",
+    "id": "q022",
+    "query": "That was too difficult to follow",
+    "intent": "clarification",
     "language": "en"
   },
   {
-    "id": "q38",
-    "query": "Start a quiz for me",
-    "intent": "quiz_help",
+    "id": "q023",
+    "query": "Can you repeat that?",
+    "intent": "clarification",
     "language": "en"
   },
   {
-    "id": "q39",
-    "query": "Can I test myself?",
-    "intent": "quiz_help",
+    "id": "q024",
+    "query": "I still do not get it",
+    "intent": "clarification",
     "language": "en"
   },
   {
-    "id": "q40",
-    "query": "Show me practice questions",
-    "intent": "quiz_help",
+    "id": "q025",
+    "query": "Explain in simple words",
+    "intent": "clarification",
     "language": "en"
   },
   {
-    "id": "q41",
-    "query": "Show my progress",
-    "intent": "progress_help",
+    "id": "q026",
+    "query": "This is confusing",
+    "intent": "clarification",
     "language": "en"
   },
   {
-    "id": "q42",
-    "query": "How many quizzes have I completed?",
-    "intent": "progress_help",
+    "id": "q027",
+    "query": "Can you say it differently?",
+    "intent": "clarification",
     "language": "en"
   },
   {
-    "id": "q43",
-    "query": "What is my score?",
-    "intent": "progress_help",
+    "id": "q028",
+    "query": "I did not understand your explanation",
+    "intent": "clarification",
     "language": "en"
   },
   {
-    "id": "q44",
-    "query": "How many points do I have?",
-    "intent": "progress_help",
+    "id": "q029",
+    "query": "Make it easier to understand",
+    "intent": "clarification",
     "language": "en"
   },
   {
-    "id": "q45",
-    "query": "Show my learning progress",
-    "intent": "progress_help",
+    "id": "q030",
+    "query": "Explain once more slowly",
+    "intent": "clarification",
     "language": "en"
   },
   {
-    "id": "q46",
+    "id": "q031",
+    "query": "Explain how camels survive in the desert",
+    "intent": "concept_explanation",
+    "language": "en"
+  },
+  {
+    "id": "q032",
+    "query": "Explain how lines and angles work",
+    "intent": "concept_explanation",
+    "language": "en"
+  },
+  {
+    "id": "q033",
+    "query": "How do scientists investigate a question?",
+    "intent": "concept_explanation",
+    "language": "en"
+  },
+  {
+    "id": "q034",
+    "query": "Explain the order of operations",
+    "intent": "concept_explanation",
+    "language": "en"
+  },
+  {
+    "id": "q035",
+    "query": "How do number patterns work?",
+    "intent": "concept_explanation",
+    "language": "en"
+  },
+  {
+    "id": "q036",
+    "query": "Explain how litmus paper tests a substance",
+    "intent": "concept_explanation",
+    "language": "en"
+  },
+  {
+    "id": "q037",
+    "query": "Explain why animals adapt to their surroundings",
+    "intent": "concept_explanation",
+    "language": "en"
+  },
+  {
+    "id": "q038",
+    "query": "How do you compare very large numbers?",
+    "intent": "concept_explanation",
+    "language": "en"
+  },
+  {
+    "id": "q039",
+    "query": "Explain what Rama Natha learned about wealth",
+    "intent": "concept_explanation",
+    "language": "en"
+  },
+  {
+    "id": "q040",
+    "query": "How did Gajaraj and the dog become friends?",
+    "intent": "concept_explanation",
+    "language": "en"
+  },
+  {
+    "id": "q041",
+    "query": "Explain how substances are grouped as acidic or basic",
+    "intent": "concept_explanation",
+    "language": "en"
+  },
+  {
+    "id": "q042",
+    "query": "How do you read large numbers correctly?",
+    "intent": "concept_explanation",
+    "language": "en"
+  },
+  {
+    "id": "q043",
+    "query": "Explain what the river was trying to say",
+    "intent": "concept_explanation",
+    "language": "en"
+  },
+  {
+    "id": "q044",
+    "query": "Explain why education matters in the lesson",
+    "intent": "concept_explanation",
+    "language": "en"
+  },
+  {
+    "id": "q045",
+    "query": "How are angles measured with a protractor?",
+    "intent": "concept_explanation",
+    "language": "en"
+  },
+  {
+    "id": "q046",
+    "query": "What is an angle?",
+    "intent": "definition",
+    "language": "en"
+  },
+  {
+    "id": "q047",
+    "query": "Define a ray",
+    "intent": "definition",
+    "language": "en"
+  },
+  {
+    "id": "q048",
+    "query": "What does adaptation mean?",
+    "intent": "definition",
+    "language": "en"
+  },
+  {
+    "id": "q049",
+    "query": "What is an acid?",
+    "intent": "definition",
+    "language": "en"
+  },
+  {
+    "id": "q050",
+    "query": "What is a pattern?",
+    "intent": "definition",
+    "language": "en"
+  },
+  {
+    "id": "q051",
+    "query": "Define an arithmetic expression",
+    "intent": "definition",
+    "language": "en"
+  },
+  {
+    "id": "q052",
+    "query": "What is a base?",
+    "intent": "definition",
+    "language": "en"
+  },
+  {
+    "id": "q053",
+    "query": "What does neutral mean?",
+    "intent": "definition",
+    "language": "en"
+  },
+  {
+    "id": "q054",
+    "query": "What is place value?",
+    "intent": "definition",
+    "language": "en"
+  },
+  {
+    "id": "q055",
+    "query": "Define a line segment",
+    "intent": "definition",
+    "language": "en"
+  },
+  {
+    "id": "q056",
+    "query": "What is an indicator?",
+    "intent": "definition",
+    "language": "en"
+  },
+  {
+    "id": "q057",
+    "query": "What is a sequence?",
+    "intent": "definition",
+    "language": "en"
+  },
+  {
+    "id": "q058",
+    "query": "What does habitat mean?",
+    "intent": "definition",
+    "language": "en"
+  },
+  {
+    "id": "q059",
+    "query": "What is a protractor?",
+    "intent": "definition",
+    "language": "en"
+  },
+  {
+    "id": "q060",
+    "query": "Define estimation",
+    "intent": "definition",
+    "language": "en"
+  },
+  {
+    "id": "q061",
+    "query": "Give me an example of a number pattern",
+    "intent": "example_request",
+    "language": "en"
+  },
+  {
+    "id": "q062",
+    "query": "Can you give me an example of an acid?",
+    "intent": "example_request",
+    "language": "en"
+  },
+  {
+    "id": "q063",
+    "query": "Show me an example problem on angles",
+    "intent": "example_request",
+    "language": "en"
+  },
+  {
+    "id": "q064",
+    "query": "Give me an example for this topic",
+    "intent": "example_request",
+    "language": "en"
+  },
+  {
+    "id": "q065",
+    "query": "Can you show a real life example?",
+    "intent": "example_request",
+    "language": "en"
+  },
+  {
+    "id": "q066",
+    "query": "Show me a sample question",
+    "intent": "example_request",
+    "language": "en"
+  },
+  {
+    "id": "q067",
+    "query": "Give an example of a large number",
+    "intent": "example_request",
+    "language": "en"
+  },
+  {
+    "id": "q068",
+    "query": "Can I see a worked example?",
+    "intent": "example_request",
+    "language": "en"
+  },
+  {
+    "id": "q069",
+    "query": "Show me one more example",
+    "intent": "example_request",
+    "language": "en"
+  },
+  {
+    "id": "q070",
+    "query": "Give me a practical example of adaptation",
+    "intent": "example_request",
+    "language": "en"
+  },
+  {
+    "id": "q071",
+    "query": "Can you show an example with brackets?",
+    "intent": "example_request",
+    "language": "en"
+  },
+  {
+    "id": "q072",
+    "query": "I want to see an example",
+    "intent": "example_request",
+    "language": "en"
+  },
+  {
+    "id": "q073",
+    "query": "Show an example of a basic substance",
+    "intent": "example_request",
+    "language": "en"
+  },
+  {
+    "id": "q074",
+    "query": "Give me a simple example",
+    "intent": "example_request",
+    "language": "en"
+  },
+  {
+    "id": "q075",
+    "query": "Show me how it looks with an example",
+    "intent": "example_request",
+    "language": "en"
+  },
+  {
+    "id": "q076",
+    "query": "What is the rule for the order of operations?",
+    "intent": "formula_help",
+    "language": "en"
+  },
+  {
+    "id": "q077",
+    "query": "Which rule applies to this kind of sum?",
+    "intent": "formula_help",
+    "language": "en"
+  },
+  {
+    "id": "q078",
+    "query": "How do I simplify this expression?",
+    "intent": "formula_help",
+    "language": "en"
+  },
+  {
+    "id": "q079",
+    "query": "What is the rule for simplifying expressions?",
+    "intent": "formula_help",
+    "language": "en"
+  },
+  {
+    "id": "q080",
+    "query": "What are the steps in the correct order?",
+    "intent": "formula_help",
+    "language": "en"
+  },
+  {
+    "id": "q081",
+    "query": "What is the rule for naming angles?",
+    "intent": "formula_help",
+    "language": "en"
+  },
+  {
+    "id": "q082",
+    "query": "How do I estimate a large number?",
+    "intent": "formula_help",
+    "language": "en"
+  },
+  {
+    "id": "q083",
+    "query": "Which method applies to this sum?",
+    "intent": "formula_help",
+    "language": "en"
+  },
+  {
+    "id": "q084",
+    "query": "What steps do I follow for brackets?",
+    "intent": "formula_help",
+    "language": "en"
+  },
+  {
+    "id": "q085",
+    "query": "How do I find the value of an expression?",
+    "intent": "formula_help",
+    "language": "en"
+  },
+  {
+    "id": "q086",
+    "query": "Give me the rule for place value",
+    "intent": "formula_help",
+    "language": "en"
+  },
+  {
+    "id": "q087",
+    "query": "What is the method to compare numbers?",
+    "intent": "formula_help",
+    "language": "en"
+  },
+  {
+    "id": "q088",
+    "query": "Which method is used to measure an angle?",
+    "intent": "formula_help",
+    "language": "en"
+  },
+  {
+    "id": "q089",
+    "query": "What is the correct sequence of steps?",
+    "intent": "formula_help",
+    "language": "en"
+  },
+  {
+    "id": "q090",
+    "query": "What rule gives the correct answer here?",
+    "intent": "formula_help",
+    "language": "en"
+  },
+  {
+    "id": "q091",
+    "query": "Hi",
+    "intent": "greeting",
+    "language": "en"
+  },
+  {
+    "id": "q092",
+    "query": "Hello",
+    "intent": "greeting",
+    "language": "en"
+  },
+  {
+    "id": "q093",
+    "query": "Good morning",
+    "intent": "greeting",
+    "language": "en"
+  },
+  {
+    "id": "q094",
+    "query": "Good evening",
+    "intent": "greeting",
+    "language": "en"
+  },
+  {
+    "id": "q095",
+    "query": "Hey there",
+    "intent": "greeting",
+    "language": "en"
+  },
+  {
+    "id": "q096",
+    "query": "Namaste",
+    "intent": "greeting",
+    "language": "en"
+  },
+  {
+    "id": "q097",
+    "query": "Hello sir",
+    "intent": "greeting",
+    "language": "en"
+  },
+  {
+    "id": "q098",
+    "query": "Hi teacher",
+    "intent": "greeting",
+    "language": "en"
+  },
+  {
+    "id": "q099",
+    "query": "Good afternoon",
+    "intent": "greeting",
+    "language": "en"
+  },
+  {
+    "id": "q100",
+    "query": "Hey",
+    "intent": "greeting",
+    "language": "en"
+  },
+  {
+    "id": "q101",
+    "query": "Hello there",
+    "intent": "greeting",
+    "language": "en"
+  },
+  {
+    "id": "q102",
+    "query": "Hi again",
+    "intent": "greeting",
+    "language": "en"
+  },
+  {
+    "id": "q103",
+    "query": "Good morning teacher",
+    "intent": "greeting",
+    "language": "en"
+  },
+  {
+    "id": "q104",
+    "query": "Hello friend",
+    "intent": "greeting",
+    "language": "en"
+  },
+  {
+    "id": "q105",
+    "query": "Hi, I am back",
+    "intent": "greeting",
+    "language": "en"
+  },
+  {
+    "id": "q106",
+    "query": "Help me solve my homework",
+    "intent": "homework_help",
+    "language": "en"
+  },
+  {
+    "id": "q107",
+    "query": "How do I solve this question?",
+    "intent": "homework_help",
+    "language": "en"
+  },
+  {
+    "id": "q108",
+    "query": "Can you help with this maths problem?",
+    "intent": "homework_help",
+    "language": "en"
+  },
+  {
+    "id": "q109",
+    "query": "I am stuck on my homework",
+    "intent": "homework_help",
+    "language": "en"
+  },
+  {
+    "id": "q110",
+    "query": "Help me answer this quiz question",
+    "intent": "homework_help",
+    "language": "en"
+  },
+  {
+    "id": "q111",
+    "query": "Can you help me?",
+    "intent": "homework_help",
+    "language": "en"
+  },
+  {
+    "id": "q112",
+    "query": "I need help with my lesson",
+    "intent": "homework_help",
+    "language": "en"
+  },
+  {
+    "id": "q113",
+    "query": "I cannot solve this angles sum",
+    "intent": "homework_help",
+    "language": "en"
+  },
+  {
+    "id": "q114",
+    "query": "Help me with this exercise",
+    "intent": "homework_help",
+    "language": "en"
+  },
+  {
+    "id": "q115",
+    "query": "How do I work out this expression?",
+    "intent": "homework_help",
+    "language": "en"
+  },
+  {
+    "id": "q116",
+    "query": "I am stuck on question three",
+    "intent": "homework_help",
+    "language": "en"
+  },
+  {
+    "id": "q117",
+    "query": "Can you help me finish this?",
+    "intent": "homework_help",
+    "language": "en"
+  },
+  {
+    "id": "q118",
+    "query": "Help me with my assignment",
+    "intent": "homework_help",
+    "language": "en"
+  },
+  {
+    "id": "q119",
+    "query": "I do not know how to start this problem",
+    "intent": "homework_help",
+    "language": "en"
+  },
+  {
+    "id": "q120",
+    "query": "Please help me solve this",
+    "intent": "homework_help",
+    "language": "en"
+  },
+  {
+    "id": "q121",
     "query": "What is today's weather?",
     "intent": "out_of_scope",
     "language": "en"
   },
   {
-    "id": "q47",
+    "id": "q122",
     "query": "Order food for me",
     "intent": "out_of_scope",
     "language": "en"
   },
   {
-    "id": "q48",
+    "id": "q123",
     "query": "Who won the cricket match?",
     "intent": "out_of_scope",
     "language": "en"
   },
   {
-    "id": "q49",
+    "id": "q124",
     "query": "Tell me a movie review",
     "intent": "out_of_scope",
     "language": "en"
   },
   {
-    "id": "q50",
+    "id": "q125",
     "query": "Book a hotel",
     "intent": "out_of_scope",
+    "language": "en"
+  },
+  {
+    "id": "q126",
+    "query": "Play a song",
+    "intent": "out_of_scope",
+    "language": "en"
+  },
+  {
+    "id": "q127",
+    "query": "Show me funny videos",
+    "intent": "out_of_scope",
+    "language": "en"
+  },
+  {
+    "id": "q128",
+    "query": "Show me the cricket score",
+    "intent": "out_of_scope",
+    "language": "en"
+  },
+  {
+    "id": "q129",
+    "query": "Show me a movie trailer",
+    "intent": "out_of_scope",
+    "language": "en"
+  },
+  {
+    "id": "q130",
+    "query": "What is the news today?",
+    "intent": "out_of_scope",
+    "language": "en"
+  },
+  {
+    "id": "q131",
+    "query": "Who is the prime minister?",
+    "intent": "out_of_scope",
+    "language": "en"
+  },
+  {
+    "id": "q132",
+    "query": "Send a message to my friend",
+    "intent": "out_of_scope",
+    "language": "en"
+  },
+  {
+    "id": "q133",
+    "query": "Show me shopping offers",
+    "intent": "out_of_scope",
+    "language": "en"
+  },
+  {
+    "id": "q134",
+    "query": "Recommend a restaurant",
+    "intent": "out_of_scope",
+    "language": "en"
+  },
+  {
+    "id": "q135",
+    "query": "Book a train ticket",
+    "intent": "out_of_scope",
+    "language": "en"
+  },
+  {
+    "id": "q136",
+    "query": "Show my progress",
+    "intent": "progress_help",
+    "language": "en"
+  },
+  {
+    "id": "q137",
+    "query": "How many quizzes have I completed?",
+    "intent": "progress_help",
+    "language": "en"
+  },
+  {
+    "id": "q138",
+    "query": "What is my score?",
+    "intent": "progress_help",
+    "language": "en"
+  },
+  {
+    "id": "q139",
+    "query": "How many points do I have?",
+    "intent": "progress_help",
+    "language": "en"
+  },
+  {
+    "id": "q140",
+    "query": "Show my learning progress",
+    "intent": "progress_help",
+    "language": "en"
+  },
+  {
+    "id": "q141",
+    "query": "What is my current level?",
+    "intent": "progress_help",
+    "language": "en"
+  },
+  {
+    "id": "q142",
+    "query": "How many badges have I earned?",
+    "intent": "progress_help",
+    "language": "en"
+  },
+  {
+    "id": "q143",
+    "query": "What is my streak?",
+    "intent": "progress_help",
+    "language": "en"
+  },
+  {
+    "id": "q144",
+    "query": "How am I performing?",
+    "intent": "progress_help",
+    "language": "en"
+  },
+  {
+    "id": "q145",
+    "query": "Show my quiz results",
+    "intent": "progress_help",
+    "language": "en"
+  },
+  {
+    "id": "q146",
+    "query": "What is my score in English?",
+    "intent": "progress_help",
+    "language": "en"
+  },
+  {
+    "id": "q147",
+    "query": "How am I doing in Mathematics?",
+    "intent": "progress_help",
+    "language": "en"
+  },
+  {
+    "id": "q148",
+    "query": "What is my Science average?",
+    "intent": "progress_help",
+    "language": "en"
+  },
+  {
+    "id": "q149",
+    "query": "Show my report",
+    "intent": "progress_help",
+    "language": "en"
+  },
+  {
+    "id": "q150",
+    "query": "Am I improving?",
+    "intent": "progress_help",
+    "language": "en"
+  },
+  {
+    "id": "q151",
+    "query": "Give me a quiz",
+    "intent": "quiz_help",
+    "language": "en"
+  },
+  {
+    "id": "q152",
+    "query": "I want to practice questions",
+    "intent": "quiz_help",
+    "language": "en"
+  },
+  {
+    "id": "q153",
+    "query": "Start a quiz for me",
+    "intent": "quiz_help",
+    "language": "en"
+  },
+  {
+    "id": "q154",
+    "query": "Can I test myself?",
+    "intent": "quiz_help",
+    "language": "en"
+  },
+  {
+    "id": "q155",
+    "query": "Show me practice questions",
+    "intent": "quiz_help",
+    "language": "en"
+  },
+  {
+    "id": "q156",
+    "query": "I want to attempt a quiz",
+    "intent": "quiz_help",
+    "language": "en"
+  },
+  {
+    "id": "q157",
+    "query": "Give me some practice problems",
+    "intent": "quiz_help",
+    "language": "en"
+  },
+  {
+    "id": "q158",
+    "query": "Can we do a quiz now?",
+    "intent": "quiz_help",
+    "language": "en"
+  },
+  {
+    "id": "q159",
+    "query": "Test me with some questions",
+    "intent": "quiz_help",
+    "language": "en"
+  },
+  {
+    "id": "q160",
+    "query": "I want to revise with questions",
+    "intent": "quiz_help",
+    "language": "en"
+  },
+  {
+    "id": "q161",
+    "query": "Start the chapter quiz",
+    "intent": "quiz_help",
+    "language": "en"
+  },
+  {
+    "id": "q162",
+    "query": "Give me more questions to practice",
+    "intent": "quiz_help",
+    "language": "en"
+  },
+  {
+    "id": "q163",
+    "query": "Can I take a test?",
+    "intent": "quiz_help",
+    "language": "en"
+  },
+  {
+    "id": "q164",
+    "query": "Quiz me on this chapter",
+    "intent": "quiz_help",
+    "language": "en"
+  },
+  {
+    "id": "q165",
+    "query": "I want practice exercises",
+    "intent": "quiz_help",
+    "language": "en"
+  },
+  {
+    "id": "q166",
+    "query": "What should I study next?",
+    "intent": "study_advice",
+    "language": "en"
+  },
+  {
+    "id": "q167",
+    "query": "How can I improve?",
+    "intent": "study_advice",
+    "language": "en"
+  },
+  {
+    "id": "q168",
+    "query": "Where am I weak?",
+    "intent": "study_advice",
+    "language": "en"
+  },
+  {
+    "id": "q169",
+    "query": "What should I focus on?",
+    "intent": "study_advice",
+    "language": "en"
+  },
+  {
+    "id": "q170",
+    "query": "Which subject do I need to work on?",
+    "intent": "study_advice",
+    "language": "en"
+  },
+  {
+    "id": "q171",
+    "query": "Help me plan what to study",
+    "intent": "study_advice",
+    "language": "en"
+  },
+  {
+    "id": "q172",
+    "query": "What do you suggest I learn?",
+    "intent": "study_advice",
+    "language": "en"
+  },
+  {
+    "id": "q173",
+    "query": "Where should I start?",
+    "intent": "study_advice",
+    "language": "en"
+  },
+  {
+    "id": "q174",
+    "query": "Which chapter should I do next?",
+    "intent": "study_advice",
+    "language": "en"
+  },
+  {
+    "id": "q175",
+    "query": "Tell me what to revise",
+    "intent": "study_advice",
+    "language": "en"
+  },
+  {
+    "id": "q176",
+    "query": "What needs more practice?",
+    "intent": "study_advice",
+    "language": "en"
+  },
+  {
+    "id": "q177",
+    "query": "Suggest something for me to study",
+    "intent": "study_advice",
+    "language": "en"
+  },
+  {
+    "id": "q178",
+    "query": "Where do I need more work?",
+    "intent": "study_advice",
+    "language": "en"
+  },
+  {
+    "id": "q179",
+    "query": "What is the best thing to learn now?",
+    "intent": "study_advice",
+    "language": "en"
+  },
+  {
+    "id": "q180",
+    "query": "Give me a study plan",
+    "intent": "study_advice",
     "language": "en"
   }
 ]
